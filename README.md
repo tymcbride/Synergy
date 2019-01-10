@@ -1,6 +1,8 @@
 # Synergy
 A quick and easy way for Geek Squad Agents to generate a text file with a client's new serial numbers.
 
+* Please note that this app is designed for Geek Squad Agents in the Precinct only, and has zero-value or use to anyone else.
+
 When you're in the Precinct, every second counts, especially when your benches get full. So, Synergy takes something that normally takes a minute, and shrinks it down to seconds. Thanks to the new key generation portal, paired with Synergy, all you have to do is copy the serial numbers for Bitdefender and Acronis, along with a client's GCID into the app, hit generate, and it will sort out the rest.
 
 To set the default path for saving generated files to, right-click on the 'Open Folder Location' button, and click the 'Edit' option.
