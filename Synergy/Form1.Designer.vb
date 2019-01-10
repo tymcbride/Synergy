@@ -140,12 +140,11 @@ Partial Class Form1
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(21, 345)
+        Me.RichTextBox1.Location = New System.Drawing.Point(12, 392)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(460, 227)
         Me.RichTextBox1.TabIndex = 9
         Me.RichTextBox1.Text = ""
-        Me.RichTextBox1.Visible = False
         '
         'Panel1
         '
@@ -204,7 +203,7 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(484, 343)
+        Me.ClientSize = New System.Drawing.Size(484, 345)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.Label4)
