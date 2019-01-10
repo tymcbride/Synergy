@@ -9,3 +9,4 @@ d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Release\
 d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Release\Synergy.exe
 d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Release\Synergy.xml
 d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Release\Synergy.pdb
+d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\bin\Release\Transitions.dll
