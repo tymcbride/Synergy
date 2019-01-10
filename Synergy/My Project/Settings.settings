@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="FolderLocation" Type="System.String" Scope="User">
-      <Value Profile="(Default)">D:\User Files\Desktop</Value>
+      <Value Profile="(Default)">E:\PrecinctTools\BD &amp; Acronis Keys - Temp</Value>
     </Setting>
   </Settings>
 </SettingsFile>

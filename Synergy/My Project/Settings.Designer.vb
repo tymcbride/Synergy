@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("D:\User Files\Desktop")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("E:\PrecinctTools\BD & Acronis Keys - Temp")>  _
         Public Property FolderLocation() As String
             Get
                 Return CType(Me("FolderLocation"),String)
