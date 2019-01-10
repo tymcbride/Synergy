@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports Transitions
+
+Public Class Form1
 
     Dim GCID_Store As String
     Dim GCID_Till As String
@@ -8,6 +10,7 @@
     Dim GCID_Year As String
     Dim GCID_Old As String
     Dim GCID_Password As String
+    Dim KeyType As String = "G"
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If TextBox1.Text = "" Then
@@ -53,10 +56,10 @@
         GCID_Password = GCID_Store + GCID_Till + GCID_Invoice + GCID_Month + GCID_Day + GCID_Year
 
         On Error GoTo 2
-        If RadioButton1.Checked = True Then
+        If KeyType = "G" Then
             'GSHM Setup
             RichTextBox1.Text = "Bitdefender Serial Number: " + TextBox1.Text + vbNewLine + "Bitdefender Password: " + GCID_Password + "Gs" + vbNewLine + vbNewLine + "Acronis Serial Number: " + TextBox2.Text + vbNewLine + "Acronis Password: " + GCID_Password
-        ElseIf RadioButton2.Checked = True Then
+        ElseIf KeyType = "U" Then
             'Ultimate Setup
             RichTextBox1.Text = "Bitdefender Serial Number: " + TextBox1.Text + vbNewLine + "Bitdefender Password: " + GCID_Password + "Gs"
         End If
@@ -64,7 +67,12 @@
         On Error GoTo 3
         'Save File
         RichTextBox1.SaveFile(My.Settings.FolderLocation + "\" + GCID_Store + "-" + GCID_Till + "-" + GCID_Invoice + ".txt", RichTextBoxStreamType.PlainText)
-
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        Panel6.BringToFront()
+        Panel6.Visible = True
+        Timer1.Enabled = True
         Exit Sub
 
 1:      MsgBox("uh oh, an error has occured. Please check that all of the information entered is accurate and try again.")
@@ -86,14 +94,6 @@
         Exit Sub
     End Sub
 
-    Private Sub RadioButton1_Click(sender As Object, e As EventArgs) Handles RadioButton1.Click
-        TextBox2.Enabled = True
-    End Sub
-
-    Private Sub RadioButton2_Click(sender As Object, e As EventArgs) Handles RadioButton2.Click
-        TextBox2.Enabled = False
-    End Sub
-
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Button1.ContextMenu = ContextMenu1
         Button2.ContextMenu = ContextMenu1
@@ -101,5 +101,26 @@
 
     Private Sub MenuItem1_Click(sender As Object, e As EventArgs) Handles MenuItem1.Click
         Form2.Show()
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click, Panel5.Click
+        KeyType = "U"
+        TextBox2.Enabled = False
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(75))
+        t.add(Panel4, "Left", 273)
+        t.run()
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click, Panel3.Click
+        KeyType = "G"
+        TextBox2.Enabled = True
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(75))
+        t.add(Panel4, "Left", 30)
+        t.run()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Panel6.SendToBack()
+        Panel6.Visible = False
     End Sub
 End Class
