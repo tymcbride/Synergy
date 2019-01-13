@@ -25,6 +25,9 @@ Partial Class FluentForm
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FluentForm))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel24 = New System.Windows.Forms.Panel()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
@@ -81,10 +84,11 @@ Partial Class FluentForm
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.Panel24 = New System.Windows.Forms.Panel()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
+        Me.Panel24.SuspendLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel14.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
@@ -110,9 +114,6 @@ Partial Class FluentForm
         Me.Panel21.SuspendLayout()
         Me.Panel22.SuspendLayout()
         Me.Panel23.SuspendLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel24.SuspendLayout()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -129,6 +130,33 @@ Partial Class FluentForm
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(200, 424)
         Me.Panel1.TabIndex = 0
+        '
+        'Panel24
+        '
+        Me.Panel24.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.Panel24.Controls.Add(Me.PictureBox8)
+        Me.Panel24.Location = New System.Drawing.Point(13, 94)
+        Me.Panel24.Name = "Panel24"
+        Me.Panel24.Size = New System.Drawing.Size(175, 1)
+        Me.Panel24.TabIndex = 10
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.BackgroundImage = CType(resources.GetObject("PictureBox8.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox8.Location = New System.Drawing.Point(169, 0)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(6, 1)
+        Me.PictureBox8.TabIndex = 0
+        Me.PictureBox8.TabStop = False
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.BackgroundImage = CType(resources.GetObject("PictureBox7.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox7.Location = New System.Drawing.Point(50, 16)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(100, 62)
+        Me.PictureBox7.TabIndex = 8
+        Me.PictureBox7.TabStop = False
         '
         'Label15
         '
@@ -515,7 +543,7 @@ Partial Class FluentForm
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(315, 42)
         Me.Label14.TabIndex = 2825
-        Me.Label14.Text = "Synergy - Serial Number Info File Generator" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Version 2.0.2"
+        Me.Label14.Text = "Synergy - Serial Number Info File Generator" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Version 2.0.3"
         '
         'PictureBox3
         '
@@ -638,32 +666,9 @@ Partial Class FluentForm
         'Timer2
         '
         '
-        'PictureBox7
+        'Timer4
         '
-        Me.PictureBox7.BackgroundImage = CType(resources.GetObject("PictureBox7.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox7.Location = New System.Drawing.Point(50, 16)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(100, 62)
-        Me.PictureBox7.TabIndex = 8
-        Me.PictureBox7.TabStop = False
-        '
-        'Panel24
-        '
-        Me.Panel24.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(113, Byte), Integer))
-        Me.Panel24.Controls.Add(Me.PictureBox8)
-        Me.Panel24.Location = New System.Drawing.Point(13, 94)
-        Me.Panel24.Name = "Panel24"
-        Me.Panel24.Size = New System.Drawing.Size(175, 1)
-        Me.Panel24.TabIndex = 10
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.BackgroundImage = CType(resources.GetObject("PictureBox8.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox8.Location = New System.Drawing.Point(169, 0)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(6, 1)
-        Me.PictureBox8.TabIndex = 0
-        Me.PictureBox8.TabStop = False
+        Me.Timer4.Interval = 1500
         '
         'FluentForm
         '
@@ -691,6 +696,9 @@ Partial Class FluentForm
         Me.Text = "Synergy - Serial Number Info File Generator"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel24.ResumeLayout(False)
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel14.ResumeLayout(False)
         Me.Panel14.PerformLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
@@ -728,9 +736,6 @@ Partial Class FluentForm
         Me.Panel22.ResumeLayout(False)
         Me.Panel23.ResumeLayout(False)
         Me.Panel23.PerformLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel24.ResumeLayout(False)
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -795,4 +800,5 @@ Partial Class FluentForm
     Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
     Friend WithEvents Panel24 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox8 As System.Windows.Forms.PictureBox
+    Friend WithEvents Timer4 As System.Windows.Forms.Timer
 End Class

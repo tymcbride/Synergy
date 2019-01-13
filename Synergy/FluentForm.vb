@@ -453,5 +453,18 @@ Public Class FluentForm
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click, Panel19.Click
         My.Settings.FolderLocation = TextBox5.Text
         My.Settings.Save()
+        Panel23.BackColor = Color.FromArgb(200, 230, 201)
+        TextBox5.BackColor = Color.FromArgb(200, 230, 201)
+        Timer4.Enabled = True
+    End Sub
+
+    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
+        Process.Start("https://github.com/tymcbride/Synergy")
+    End Sub
+
+    Private Sub Timer4_Tick(sender As Object, e As EventArgs) Handles Timer4.Tick
+        Panel23.BackColor = Color.White
+        TextBox5.BackColor = Color.White
+        Timer4.Enabled = False
     End Sub
 End Class
