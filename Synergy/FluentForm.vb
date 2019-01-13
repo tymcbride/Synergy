@@ -16,68 +16,90 @@ Public Class FluentForm
 
     Private Sub FluentForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label9.Text = My.Settings.TitleText
+        TextBox5.Text = My.Settings.FolderLocation
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click, Panel2.Click
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click, Panel2.Click, PictureBox4.Click
+        Panel17.Visible = False
+        Panel17.SendToBack()
         KeyType = "G"
+        PictureBox4.BackgroundImage = My.Resources.Sidebar_Member_White
+        PictureBox5.BackgroundImage = My.Resources.Sidebar_Ultimate_Grey
+        PictureBox6.BackgroundImage = My.Resources.Sidebar_Settings_Grey
         TextBox2.Enabled = True
         Panel12.BackColor = Color.White
         Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
         t.add(Label1, "ForeColor", Color.White)
         t.add(Label2, "ForeColor", Color.FromArgb(112, 110, 113))
+        t.add(Label7, "ForeColor", Color.FromArgb(112, 110, 113))
         t.run()
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click, Panel3.Click
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click, Panel3.Click, PictureBox5.Click
+        Panel17.Visible = False
+        Panel17.SendToBack()
         KeyType = "U"
+        PictureBox4.BackgroundImage = My.Resources.Sidebar_Member_Grey
+        PictureBox5.BackgroundImage = My.Resources.Sidebar_Ultimate_White
+        PictureBox6.BackgroundImage = My.Resources.Sidebar_Settings_Grey
         TextBox2.Enabled = False
         Panel12.BackColor = Color.FromArgb(240, 240, 240)
         Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
         t.add(Label2, "ForeColor", Color.White)
         t.add(Label1, "ForeColor", Color.FromArgb(112, 110, 113))
+        t.add(Label7, "ForeColor", Color.FromArgb(112, 110, 113))
         t.run()
     End Sub
 
-    Private Sub Label1_MouseEnter(sender As Object, e As EventArgs) Handles Label1.MouseEnter, Panel2.MouseEnter
+    Private Sub Label1_MouseEnter(sender As Object, e As EventArgs) Handles Label1.MouseEnter, Panel2.MouseEnter, PictureBox4.MouseEnter
         Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
         t.add(Panel2, "BackColor", Color.FromArgb(90, 90, 90))
         t.add(Panel5, "BackColor", Color.FromArgb(90, 90, 90))
         t.run()
     End Sub
 
-    Private Sub Label1_MouseLeave(sender As Object, e As EventArgs) Handles Label1.MouseLeave, Panel2.MouseLeave
+    Private Sub Label1_MouseLeave(sender As Object, e As EventArgs) Handles Label1.MouseLeave, Panel2.MouseLeave, PictureBox4.MouseLeave
         Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
         t.add(Panel2, "BackColor", Color.FromArgb(64, 64, 66))
         t.add(Panel5, "BackColor", Color.FromArgb(64, 64, 66))
         t.run()
     End Sub
 
-    Private Sub Label2_MouseEnter(sender As Object, e As EventArgs) Handles Label2.MouseEnter, Panel3.MouseEnter
+    Private Sub Label2_MouseEnter(sender As Object, e As EventArgs) Handles Label2.MouseEnter, Panel3.MouseEnter, PictureBox5.MouseEnter
         Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
         t.add(Panel3, "BackColor", Color.FromArgb(90, 90, 90))
         t.add(Panel6, "BackColor", Color.FromArgb(90, 90, 90))
         t.run()
     End Sub
 
-    Private Sub Label2_MouseLeave(sender As Object, e As EventArgs) Handles Label2.MouseLeave, Panel3.MouseLeave
+    Private Sub Label2_MouseLeave(sender As Object, e As EventArgs) Handles Label2.MouseLeave, Panel3.MouseLeave, PictureBox5.MouseLeave
         Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
         t.add(Panel3, "BackColor", Color.FromArgb(64, 64, 66))
         t.add(Panel6, "BackColor", Color.FromArgb(64, 64, 66))
         t.run()
     End Sub
 
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click, Panel14.Click
-        FluentSettings.Show()
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click, Panel14.Click, PictureBox6.Click
+        Panel17.Visible = True
+        Panel17.BringToFront()
+        PictureBox4.BackgroundImage = My.Resources.Sidebar_Member_Grey
+        PictureBox5.BackgroundImage = My.Resources.Sidebar_Ultimate_Grey
+        PictureBox6.BackgroundImage = My.Resources.Sidebar_Settings_White
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Label7, "ForeColor", Color.White)
+        t.add(Label2, "ForeColor", Color.FromArgb(112, 110, 113))
+        t.add(Label1, "ForeColor", Color.FromArgb(112, 110, 113))
+        t.run()
     End Sub
 
-    Private Sub Label7_MouseEnter(sender As Object, e As EventArgs) Handles Label7.MouseEnter, Panel14.MouseEnter
+    Private Sub Label7_MouseEnter(sender As Object, e As EventArgs) Handles Label7.MouseEnter, Panel14.MouseEnter, PictureBox6.MouseEnter
         Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
         t.add(Panel14, "BackColor", Color.FromArgb(90, 90, 90))
         t.add(Panel15, "BackColor", Color.FromArgb(90, 90, 90))
         t.run()
     End Sub
 
-    Private Sub Label7_MouseLeave(sender As Object, e As EventArgs) Handles Label7.MouseLeave, Panel14.MouseLeave
+    Private Sub Label7_MouseLeave(sender As Object, e As EventArgs) Handles Label7.MouseLeave, Panel14.MouseLeave, PictureBox6.MouseLeave
         Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
         t.add(Panel14, "BackColor", Color.FromArgb(64, 64, 66))
         t.add(Panel15, "BackColor", Color.FromArgb(64, 64, 66))
@@ -186,8 +208,8 @@ Public Class FluentForm
 
     Private Sub Label6_MouseLeave(sender As Object, e As EventArgs) Handles Panel13.MouseLeave, Label6.MouseLeave
         Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
-        t.add(Panel13, "BackColor", Color.FromArgb(249, 249, 249))
-        t.add(Panel16, "BackColor", Color.FromArgb(249, 249, 249))
+        t.add(Panel13, "BackColor", Color.FromArgb(251, 252, 252))
+        t.add(Panel16, "BackColor", Color.FromArgb(251, 252, 252))
         t.run()
     End Sub
 
@@ -354,5 +376,82 @@ Public Class FluentForm
             Label9.Text = My.Settings.TitleText
             My.Settings.Save()
         End If
+    End Sub
+
+    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click, Panel21.Click
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel21, "BackColor", Color.FromArgb(251, 252, 252))
+        t.add(Panel20, "BackColor", Color.FromArgb(251, 252, 252))
+        t.run()
+        Timer2.Enabled = True
+    End Sub
+
+    Private Sub Label10_MouseDown(sender As Object, e As MouseEventArgs) Handles Label10.MouseDown, Panel21.MouseDown
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel21, "BackColor", Color.FromArgb(200, 200, 200))
+        t.add(Panel20, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+    Private Sub Label10_MouseEnter(sender As Object, e As EventArgs) Handles Label10.MouseEnter, Panel21.MouseEnter
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel21, "BackColor", Color.White)
+        t.add(Panel20, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+    Private Sub Label10_MouseLeave(sender As Object, e As EventArgs) Handles Label10.MouseLeave, Panel21.MouseLeave
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel21, "BackColor", Color.FromArgb(251, 252, 252))
+        t.add(Panel20, "BackColor", Color.FromArgb(251, 252, 252))
+        t.run()
+    End Sub
+
+    Private Sub Label10_MouseUp(sender As Object, e As MouseEventArgs) Handles Label10.MouseUp, Panel21.MouseUp
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel21, "BackColor", Color.White)
+        t.add(Panel20, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+    Private Sub Label8_MouseDown(sender As Object, e As MouseEventArgs) Handles Label8.MouseDown, Panel19.MouseDown
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel19, "BackColor", Color.FromArgb(200, 200, 200))
+        t.add(Panel18, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+    Private Sub Label8_MouseEnter(sender As Object, e As EventArgs) Handles Label8.MouseEnter, Panel19.MouseEnter
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel19, "BackColor", Color.White)
+        t.add(Panel18, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+    Private Sub Label8_MouseLeave(sender As Object, e As EventArgs) Handles Label8.MouseLeave, Panel19.MouseLeave
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel19, "BackColor", Color.FromArgb(251, 252, 252))
+        t.add(Panel18, "BackColor", Color.FromArgb(251, 252, 252))
+        t.run()
+    End Sub
+
+    Private Sub Label8_MouseUp(sender As Object, e As MouseEventArgs) Handles Label8.MouseUp, Panel19.MouseUp
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel19, "BackColor", Color.White)
+        t.add(Panel18, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        Timer2.Enabled = False
+        FolderBrowserDialog1.ShowDialog()
+        If FolderBrowserDialog1.SelectedPath = "" = False Then
+            TextBox5.Text = FolderBrowserDialog1.SelectedPath
+        End If
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click, Panel19.Click
+        My.Settings.FolderLocation = TextBox5.Text
+        My.Settings.Save()
     End Sub
 End Class

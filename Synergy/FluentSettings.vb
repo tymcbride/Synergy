@@ -48,7 +48,7 @@ Public Class FluentSettings
         TextBox1.Text = FolderBrowserDialog1.SelectedPath
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click, Panel5.Click
         Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
         t.add(Panel5, "BackColor", Color.FromArgb(249, 249, 249))
         t.add(Panel3, "BackColor", Color.FromArgb(249, 249, 249))

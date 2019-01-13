@@ -163,6 +163,12 @@
   <ItemGroup>
     <Content Include="Icon.ico" />
     <Content Include="Icon_Fluent.ico" />
+    <None Include="Resources\Sidebar_Member_Grey.png" />
+    <None Include="Resources\Sidebar_Ultimate_White.png" />
+    <None Include="Resources\Sidebar_Ultimate_Grey.png" />
+    <None Include="Resources\Sidebar_Settings_White.png" />
+    <None Include="Resources\Sidebar_Settings_Grey.png" />
+    <None Include="Resources\Sidebar_Member_White.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
