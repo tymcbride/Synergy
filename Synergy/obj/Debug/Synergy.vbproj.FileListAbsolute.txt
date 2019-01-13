@@ -11,3 +11,5 @@ d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Debug\Sy
 d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Debug\Synergy.Form2.resources
 d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\bin\Debug\Transitions.dll
 d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Debug\Synergy.vbprojResolveAssemblyReference.cache
+d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Debug\Synergy.FluentForm.resources
+d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Debug\Synergy.FluentSettings.resources

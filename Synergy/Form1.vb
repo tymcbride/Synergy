@@ -97,6 +97,7 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Button1.ContextMenu = ContextMenu1
         Button2.ContextMenu = ContextMenu1
+        Label3.ContextMenu = ContextMenu2
     End Sub
 
     Private Sub MenuItem1_Click(sender As Object, e As EventArgs) Handles MenuItem1.Click
@@ -107,7 +108,7 @@ Public Class Form1
         KeyType = "U"
         TextBox2.Enabled = False
         Dim t As New Transition(New TransitionType_EaseInEaseOut(75))
-        t.add(Panel4, "Left", 273)
+        t.add(Panel4, "Left", 243)
         t.run()
     End Sub
 
@@ -115,12 +116,16 @@ Public Class Form1
         KeyType = "G"
         TextBox2.Enabled = True
         Dim t As New Transition(New TransitionType_EaseInEaseOut(75))
-        t.add(Panel4, "Left", 30)
+        t.add(Panel4, "Left", 0)
         t.run()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Panel6.SendToBack()
         Panel6.Visible = False
+    End Sub
+
+    Private Sub MenuItem2_Click(sender As Object, e As EventArgs) Handles MenuItem2.Click
+        FluentForm.Show()
     End Sub
 End Class

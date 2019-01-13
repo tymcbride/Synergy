@@ -46,7 +46,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Icon.ico</ApplicationIcon>
+    <ApplicationIcon>Icon_Fluent.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -77,6 +77,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FluentForm.Designer.vb">
+      <DependentUpon>FluentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FluentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSettings.Designer.vb">
+      <DependentUpon>FluentSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +119,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FluentForm.resx">
+      <DependentUpon>FluentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSettings.resx">
+      <DependentUpon>FluentSettings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
+    <Content Include="Icon_Fluent.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
