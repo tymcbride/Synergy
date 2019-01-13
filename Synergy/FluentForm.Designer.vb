@@ -37,6 +37,7 @@ Partial Class FluentForm
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -52,9 +53,12 @@ Partial Class FluentForm
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Panel16 = New System.Windows.Forms.Panel()
         Me.Panel13 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.FlashTimerA = New System.Windows.Forms.Timer(Me.components)
+        Me.FlashTimerB = New System.Windows.Forms.Timer(Me.components)
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel14.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -181,6 +185,7 @@ Partial Class FluentForm
         '
         Me.Panel4.BackColor = System.Drawing.Color.White
         Me.Panel4.Controls.Add(Me.Label9)
+        Me.Panel4.Controls.Add(Me.TextBox4)
         Me.Panel4.Location = New System.Drawing.Point(200, 0)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(516, 70)
@@ -197,6 +202,18 @@ Partial Class FluentForm
         Me.Label9.Size = New System.Drawing.Size(187, 40)
         Me.Label9.TabIndex = 2799
         Me.Label9.Text = "Precinct 959"
+        Me.ToolTip1.SetToolTip(Me.Label9, "Double-click to change this text")
+        '
+        'TextBox4
+        '
+        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox4.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Bold)
+        Me.TextBox4.Location = New System.Drawing.Point(22, 8)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(477, 39)
+        Me.TextBox4.TabIndex = 2800
+        Me.TextBox4.Text = "Precinct 959"
+        Me.TextBox4.Visible = False
         '
         'Label3
         '
@@ -343,18 +360,6 @@ Partial Class FluentForm
         Me.Panel13.Size = New System.Drawing.Size(258, 50)
         Me.Panel13.TabIndex = 2813
         '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(127, 128)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(36, 26)
-        Me.RichTextBox1.TabIndex = 2814
-        Me.RichTextBox1.Text = ""
-        '
-        'Timer1
-        '
-        Me.Timer1.Interval = 1000
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -366,6 +371,26 @@ Partial Class FluentForm
         Me.Label6.Size = New System.Drawing.Size(172, 25)
         Me.Label6.TabIndex = 2811
         Me.Label6.Text = "Generate and Save"
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(127, 128)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(36, 26)
+        Me.RichTextBox1.TabIndex = 2814
+        Me.RichTextBox1.Text = ""
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 2000
+        '
+        'FlashTimerA
+        '
+        Me.FlashTimerA.Interval = 200
+        '
+        'FlashTimerB
+        '
+        Me.FlashTimerB.Interval = 200
         '
         'FluentForm
         '
@@ -448,4 +473,8 @@ Partial Class FluentForm
     Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents FlashTimerA As System.Windows.Forms.Timer
+    Friend WithEvents FlashTimerB As System.Windows.Forms.Timer
+    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 End Class

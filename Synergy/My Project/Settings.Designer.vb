@@ -65,6 +65,18 @@ Namespace My
                 Me("FolderLocation") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Geek Squad")>  _
+        Public Property TitleText() As String
+            Get
+                Return CType(Me("TitleText"),String)
+            End Get
+            Set
+                Me("TitleText") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

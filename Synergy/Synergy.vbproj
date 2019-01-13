@@ -77,6 +77,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FluentFileOverWriteDialog.Designer.vb">
+      <DependentUpon>FluentFileOverWriteDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FluentFileOverWriteDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FluentForm.Designer.vb">
       <DependentUpon>FluentForm.vb</DependentUpon>
     </Compile>
@@ -119,6 +125,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FluentFileOverWriteDialog.resx">
+      <DependentUpon>FluentFileOverWriteDialog.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FluentForm.resx">
       <DependentUpon>FluentForm.vb</DependentUpon>
     </EmbeddedResource>

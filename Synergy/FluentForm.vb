@@ -11,9 +11,11 @@ Public Class FluentForm
     Dim GCID_Old As String
     Dim GCID_Password As String
     Dim KeyType As String = "G"
+    Dim FlashTimerSender As String
+    Dim FlashTimerCount As Integer = 0
 
     Private Sub FluentForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Label9.Text = My.Settings.TitleText
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click, Panel2.Click
@@ -83,19 +85,22 @@ Public Class FluentForm
     End Sub
 
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Panel13.Click, Label6.Click
-        If TextBox1.Text = "" Then
-            MsgBox("Please enter a valid Bitdefender serial number.")
+        If TextBox3.Text.Length = 15 = False Then
+            FlashTimerSender = "gcid"
+            FlashTimerA.Enabled = True
             Exit Sub
         End If
-        If TextBox2.Text = "" Then
+        If TextBox1.TextLength < 5 Then
+            FlashTimerSender = "bitdefender"
+            FlashTimerA.Enabled = True
+            Exit Sub
+        End If
+        If TextBox2.TextLength < 15 Then
             If TextBox2.Enabled = True Then
-                MsgBox("Please enter a valid Acronis serial number.")
+                FlashTimerSender = "acronis"
+                FlashTimerA.Enabled = True
                 Exit Sub
             End If
-        End If
-        If TextBox3.Text.Length = 15 = False Then
-            MsgBox("Uh oh, the GCID doesn't look like it's been entered correctly. Please make sure that it is in the 'SSSYYMMDDTTIIII' format where S - Store, Y - Year, M - Month, D - Day, T - Till and I - Invoice. For best results, simply copy and paste the GCID from the key portal.")
-            Exit Sub
         End If
 
         On Error GoTo 1
@@ -136,6 +141,14 @@ Public Class FluentForm
 
         On Error GoTo 3
         'Save File
+        If System.IO.File.Exists(My.Settings.FolderLocation + "\" + GCID_Store + "-" + GCID_Till + "-" + GCID_Invoice + ".txt") Then
+            Dim result As Integer = MessageBox.Show("A file with this GCID already exists. Do you wish to over-write it?", "GCID Info File Already Exists", MessageBoxButtons.YesNo)
+            If result = DialogResult.No Then
+                Exit Sub
+            ElseIf result = DialogResult.Yes Then
+
+            End If
+        End If
         RichTextBox1.SaveFile(My.Settings.FolderLocation + "\" + GCID_Store + "-" + GCID_Till + "-" + GCID_Invoice + ".txt", RichTextBoxStreamType.PlainText)
         RichTextBox1.Text = ""
         TextBox1.Text = ""
@@ -147,13 +160,13 @@ Public Class FluentForm
         Timer1.Enabled = True
         Exit Sub
 
-1:      MsgBox("uh oh, an error has occured. Please check that all of the information entered is accurate and try again.")
+1:      MsgBox("An error has occured. Please check that all of the information entered is accurate and try again.")
         Exit Sub
 
-2:      MsgBox("Uh oh, an error has occured when creating the text file. Please check that all of the information entered is accurate and try again. If the issue persists, try restarting the app.")
+2:      MsgBox("An error has occured when creating the text file. Please check that all of the information entered is accurate and try again. If the issue persists, try restarting the app.")
         Exit Sub
 
-3:      MsgBox("Uh oh, an error has occured when saving the file. Please check that the path exists by clicking the 'Open File Location' button, and that there is not already a file with this GCID in that location.")
+3:      MsgBox("An error has occured when saving the file. Please check that the path exists by clicking the 'Open File Location' button, and that there is not already a file with this GCID in that location.")
         Exit Sub
     End Sub
 
@@ -189,5 +202,157 @@ Public Class FluentForm
         Label6.Location = New Point(43, 13)
         Label6.Text = "Generate and Save"
         Timer1.Enabled = False
+    End Sub
+
+    Private Sub FlashTimerA_Tick(sender As Object, e As EventArgs) Handles FlashTimerA.Tick
+        If FlashTimerCount = 0 Then
+            If FlashTimerSender = "bitdefender" Then
+                Panel10.BackColor = Color.FromArgb(255, 205, 210)
+                TextBox1.BackColor = Color.FromArgb(255, 205, 210)
+                FlashTimerCount = 1
+                FlashTimerA.Enabled = False
+                FlashTimerB.Enabled = True
+            ElseIf FlashTimerSender = "gcid" Then
+                Panel7.BackColor = Color.FromArgb(255, 205, 210)
+                TextBox3.BackColor = Color.FromArgb(255, 205, 210)
+                FlashTimerCount = 1
+                FlashTimerA.Enabled = False
+                FlashTimerB.Enabled = True
+            ElseIf FlashTimerSender = "acronis" Then
+                Panel12.BackColor = Color.FromArgb(255, 205, 210)
+                TextBox2.BackColor = Color.FromArgb(255, 205, 210)
+                FlashTimerCount = 1
+                FlashTimerA.Enabled = False
+                FlashTimerB.Enabled = True
+            End If
+            Exit Sub
+        ElseIf FlashTimerCount = 2 Then
+            If FlashTimerSender = "bitdefender" Then
+                Panel10.BackColor = Color.FromArgb(255, 205, 210)
+                TextBox1.BackColor = Color.FromArgb(255, 205, 210)
+                FlashTimerCount = 3
+                FlashTimerA.Enabled = False
+                FlashTimerB.Enabled = True
+            ElseIf FlashTimerSender = "gcid" Then
+                Panel7.BackColor = Color.FromArgb(255, 205, 210)
+                TextBox3.BackColor = Color.FromArgb(255, 205, 210)
+                FlashTimerCount = 3
+                FlashTimerA.Enabled = False
+                FlashTimerB.Enabled = True
+            ElseIf FlashTimerSender = "acronis" Then
+                Panel12.BackColor = Color.FromArgb(255, 205, 210)
+                TextBox2.BackColor = Color.FromArgb(255, 205, 210)
+                FlashTimerCount = 3
+                FlashTimerA.Enabled = False
+                FlashTimerB.Enabled = True
+            End If
+            Exit Sub
+        ElseIf FlashTimerCount = 4 Then
+            If FlashTimerSender = "bitdefender" Then
+                Panel10.BackColor = Color.FromArgb(255, 205, 210)
+                TextBox1.BackColor = Color.FromArgb(255, 205, 210)
+                FlashTimerCount = 5
+                FlashTimerA.Enabled = False
+                FlashTimerB.Enabled = True
+            ElseIf FlashTimerSender = "gcid" Then
+                Panel7.BackColor = Color.FromArgb(255, 205, 210)
+                TextBox3.BackColor = Color.FromArgb(255, 205, 210)
+                FlashTimerCount = 5
+                FlashTimerA.Enabled = False
+                FlashTimerB.Enabled = True
+            ElseIf FlashTimerSender = "acronis" Then
+                Panel12.BackColor = Color.FromArgb(255, 205, 210)
+                TextBox2.BackColor = Color.FromArgb(255, 205, 210)
+                FlashTimerCount = 5
+                FlashTimerA.Enabled = False
+                FlashTimerB.Enabled = True
+            End If
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub FlashTimerB_Tick(sender As Object, e As EventArgs) Handles FlashTimerB.Tick
+        If FlashTimerCount = 1 Then
+            If FlashTimerSender = "bitdefender" Then
+                Panel10.BackColor = Color.White
+                TextBox1.BackColor = Color.White
+                FlashTimerCount = 2
+                FlashTimerA.Enabled = True
+                FlashTimerB.Enabled = False
+            ElseIf FlashTimerSender = "gcid" Then
+                Panel7.BackColor = Color.White
+                TextBox3.BackColor = Color.White
+                FlashTimerCount = 2
+                FlashTimerA.Enabled = True
+                FlashTimerB.Enabled = False
+            ElseIf FlashTimerSender = "acronis" Then
+                Panel12.BackColor = Color.White
+                TextBox2.BackColor = Color.White
+                FlashTimerCount = 2
+                FlashTimerA.Enabled = True
+                FlashTimerB.Enabled = False
+            End If
+            Exit Sub
+        ElseIf FlashTimerCount = 3 Then
+            If FlashTimerSender = "bitdefender" Then
+                Panel10.BackColor = Color.White
+                TextBox1.BackColor = Color.White
+                FlashTimerCount = 4
+                FlashTimerA.Enabled = True
+                FlashTimerB.Enabled = False
+            ElseIf FlashTimerSender = "gcid" Then
+                Panel7.BackColor = Color.White
+                TextBox3.BackColor = Color.White
+                FlashTimerCount = 4
+                FlashTimerA.Enabled = True
+                FlashTimerB.Enabled = False
+            ElseIf FlashTimerSender = "acronis" Then
+                Panel12.BackColor = Color.White
+                TextBox2.BackColor = Color.White
+                FlashTimerCount = 4
+                FlashTimerA.Enabled = True
+                FlashTimerB.Enabled = False
+            End If
+            Exit Sub
+        ElseIf FlashTimerCount = 5 Then
+            If FlashTimerSender = "bitdefender" Then
+                Panel10.BackColor = Color.White
+                TextBox1.BackColor = Color.White
+                FlashTimerCount = 0
+                FlashTimerA.Enabled = False
+                FlashTimerB.Enabled = False
+            ElseIf FlashTimerSender = "gcid" Then
+                Panel7.BackColor = Color.White
+                TextBox3.BackColor = Color.White
+                FlashTimerCount = 0
+                FlashTimerA.Enabled = False
+                FlashTimerB.Enabled = False
+            ElseIf FlashTimerSender = "acronis" Then
+                Panel12.BackColor = Color.White
+                TextBox2.BackColor = Color.White
+                FlashTimerCount = 0
+                FlashTimerA.Enabled = False
+                FlashTimerB.Enabled = False
+            End If
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub Label9_DoubleClick(sender As Object, e As EventArgs) Handles Label9.DoubleClick
+        TextBox4.Text = My.Settings.TitleText
+        TextBox4.Visible = True
+        TextBox4.BringToFront()
+        TextBox4.Focus()
+        TextBox4.SelectAll()
+    End Sub
+
+    Private Sub TextBox4_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox4.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            My.Settings.TitleText = TextBox4.Text
+            TextBox4.Visible = False
+            TextBox4.SendToBack()
+            Label9.Text = My.Settings.TitleText
+            My.Settings.Save()
+        End If
     End Sub
 End Class

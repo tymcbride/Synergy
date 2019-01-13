@@ -5,5 +5,8 @@
     <Setting Name="FolderLocation" Type="System.String" Scope="User">
       <Value Profile="(Default)">E:\PrecinctTools\BD &amp; Acronis Keys - Temp</Value>
     </Setting>
+    <Setting Name="TitleText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Geek Squad</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
