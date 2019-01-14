@@ -2,8 +2,6 @@ d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\bin\Release\
 d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\bin\Release\Synergy.exe
 d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\bin\Release\Synergy.pdb
 d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\bin\Release\Synergy.xml
-d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Release\Synergy.Form1.resources
-d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Release\Synergy.Form2.resources
 d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Release\Synergy.Resources.resources
 d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Release\Synergy.vbproj.GenerateResource.Cache
 d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Release\Synergy.exe
@@ -13,3 +11,4 @@ d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\bin\Release\
 d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Release\Synergy.FluentForm.resources
 d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Release\Synergy.FluentSettings.resources
 d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Release\Synergy.FluentFileOverWriteDialog.resources
+d:\user files\documents\visual studio 2013\Projects\Synergy\Synergy\obj\Release\Synergy.vbprojResolveAssemblyReference.cache

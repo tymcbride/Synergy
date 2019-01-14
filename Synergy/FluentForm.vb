@@ -467,4 +467,16 @@ Public Class FluentForm
         TextBox5.BackColor = Color.White
         Timer4.Enabled = False
     End Sub
+
+    Private Sub Panel7_Click(sender As Object, e As EventArgs) Handles Panel7.Click
+        TextBox3.Focus()
+    End Sub
+
+    Private Sub Panel10_Click(sender As Object, e As EventArgs) Handles Panel10.Click
+        TextBox1.Focus()
+    End Sub
+
+    Private Sub Panel12_Click(sender As Object, e As EventArgs) Handles Panel12.Click
+        TextBox2.Focus()
+    End Sub
 End Class
