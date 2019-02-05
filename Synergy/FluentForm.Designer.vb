@@ -31,13 +31,17 @@ Partial Class FluentForm
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.Panel15 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -81,10 +85,6 @@ Partial Class FluentForm
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
-        Me.Panel15 = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel24.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,6 +95,7 @@ Partial Class FluentForm
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
@@ -113,7 +114,6 @@ Partial Class FluentForm
         Me.Panel21.SuspendLayout()
         Me.Panel22.SuspendLayout()
         Me.Panel23.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -188,6 +188,14 @@ Partial Class FluentForm
         Me.PictureBox6.TabIndex = 5
         Me.PictureBox6.TabStop = False
         '
+        'Panel15
+        '
+        Me.Panel15.BackgroundImage = CType(resources.GetObject("Panel15.BackgroundImage"), System.Drawing.Image)
+        Me.Panel15.Location = New System.Drawing.Point(180, 0)
+        Me.Panel15.Name = "Panel15"
+        Me.Panel15.Size = New System.Drawing.Size(20, 40)
+        Me.Panel15.TabIndex = 2
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -218,6 +226,14 @@ Partial Class FluentForm
         Me.PictureBox5.TabIndex = 4
         Me.PictureBox5.TabStop = False
         '
+        'Panel6
+        '
+        Me.Panel6.BackgroundImage = CType(resources.GetObject("Panel6.BackgroundImage"), System.Drawing.Image)
+        Me.Panel6.Location = New System.Drawing.Point(180, 0)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(20, 40)
+        Me.Panel6.TabIndex = 2
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -225,9 +241,9 @@ Partial Class FluentForm
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(113, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(44, 11)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(93, 17)
+        Me.Label2.Size = New System.Drawing.Size(128, 17)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Ultimate Setup"
+        Me.Label2.Text = "GSPT/Ultimate Setup"
         '
         'Panel2
         '
@@ -248,6 +264,14 @@ Partial Class FluentForm
         Me.PictureBox4.TabIndex = 3
         Me.PictureBox4.TabStop = False
         '
+        'Panel5
+        '
+        Me.Panel5.BackgroundImage = CType(resources.GetObject("Panel5.BackgroundImage"), System.Drawing.Image)
+        Me.Panel5.Location = New System.Drawing.Point(180, 0)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(20, 40)
+        Me.Panel5.TabIndex = 1
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -255,9 +279,18 @@ Partial Class FluentForm
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(44, 11)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(82, 17)
+        Me.Label1.Size = New System.Drawing.Size(115, 17)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "GSHM Setup"
+        Me.Label1.Text = "GSM/GSHM Setup"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(180, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(20, 424)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'Panel4
         '
@@ -277,9 +310,9 @@ Partial Class FluentForm
         Me.Label9.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label9.Location = New System.Drawing.Point(15, 8)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(187, 40)
+        Me.Label9.Size = New System.Drawing.Size(180, 40)
         Me.Label9.TabIndex = 2799
-        Me.Label9.Text = "Precinct 959"
+        Me.Label9.Text = "Geek Squad"
         Me.ToolTip1.SetToolTip(Me.Label9, "Double-click to change this text")
         '
         'TextBox4
@@ -513,7 +546,7 @@ Partial Class FluentForm
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(315, 42)
         Me.Label14.TabIndex = 2825
-        Me.Label14.Text = "Synergy - Serial Number Info File Generator" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Version 2.0.4"
+        Me.Label14.Text = "Synergy - Serial Number Info File Generator" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Version 2.0.6"
         '
         'PictureBox3
         '
@@ -640,39 +673,6 @@ Partial Class FluentForm
         '
         Me.Timer4.Interval = 1500
         '
-        'Panel15
-        '
-        Me.Panel15.BackgroundImage = CType(resources.GetObject("Panel15.BackgroundImage"), System.Drawing.Image)
-        Me.Panel15.Location = New System.Drawing.Point(180, 0)
-        Me.Panel15.Name = "Panel15"
-        Me.Panel15.Size = New System.Drawing.Size(20, 40)
-        Me.Panel15.TabIndex = 2
-        '
-        'Panel5
-        '
-        Me.Panel5.BackgroundImage = CType(resources.GetObject("Panel5.BackgroundImage"), System.Drawing.Image)
-        Me.Panel5.Location = New System.Drawing.Point(180, 0)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(20, 40)
-        Me.Panel5.TabIndex = 1
-        '
-        'Panel6
-        '
-        Me.Panel6.BackgroundImage = CType(resources.GetObject("Panel6.BackgroundImage"), System.Drawing.Image)
-        Me.Panel6.Location = New System.Drawing.Point(180, 0)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(20, 40)
-        Me.Panel6.TabIndex = 2
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(180, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(20, 424)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'FluentForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -711,6 +711,7 @@ Partial Class FluentForm
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -738,7 +739,6 @@ Partial Class FluentForm
         Me.Panel22.ResumeLayout(False)
         Me.Panel23.ResumeLayout(False)
         Me.Panel23.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

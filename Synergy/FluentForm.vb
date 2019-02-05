@@ -27,6 +27,7 @@ Public Class FluentForm
         PictureBox5.BackgroundImage = My.Resources.Sidebar_Ultimate_Grey
         PictureBox6.BackgroundImage = My.Resources.Sidebar_Settings_Grey
         TextBox2.Enabled = True
+        TextBox2.BackColor = Color.White
         Panel12.BackColor = Color.White
         Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
         t.add(Label1, "ForeColor", Color.White)
@@ -43,6 +44,7 @@ Public Class FluentForm
         PictureBox5.BackgroundImage = My.Resources.Sidebar_Ultimate_White
         PictureBox6.BackgroundImage = My.Resources.Sidebar_Settings_Grey
         TextBox2.Enabled = False
+        TextBox2.BackColor = Color.FromArgb(240, 240, 240)
         Panel12.BackColor = Color.FromArgb(240, 240, 240)
         Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
         t.add(Label2, "ForeColor", Color.White)
@@ -173,12 +175,14 @@ Public Class FluentForm
         End If
         RichTextBox1.SaveFile(My.Settings.FolderLocation + "\" + GCID_Store + "-" + GCID_Till + "-" + GCID_Invoice + ".txt", RichTextBoxStreamType.PlainText)
         RichTextBox1.Text = ""
-        TextBox1.Text = ""
-        TextBox2.Text = ""
-        TextBox3.Text = ""
+        TextBox1.BackColor = Color.FromArgb(200, 230, 201)
+        TextBox2.BackColor = Color.FromArgb(200, 230, 201)
+        TextBox3.BackColor = Color.FromArgb(200, 230, 201)
+        Panel7.BackColor = Color.FromArgb(200, 230, 201)
+        Panel10.BackColor = Color.FromArgb(200, 230, 201)
+        Panel12.BackColor = Color.FromArgb(200, 230, 201)
         Label6.Location = New Point(26, 13)
         Label6.Text = "File Saved Successfully"
-        TextBox3.Focus()
         Timer1.Enabled = True
         Exit Sub
 
@@ -221,8 +225,18 @@ Public Class FluentForm
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        TextBox1.BackColor = Color.White
+        TextBox2.BackColor = Color.White
+        TextBox3.BackColor = Color.White
+        Panel7.BackColor = Color.White
+        Panel10.BackColor = Color.White
+        Panel12.BackColor = Color.White
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
         Label6.Location = New Point(43, 13)
         Label6.Text = "Generate and Save"
+        TextBox3.Focus()
         Timer1.Enabled = False
     End Sub
 
