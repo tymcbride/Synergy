@@ -25,6 +25,17 @@ Partial Class FluentForm
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FluentForm))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel25 = New System.Windows.Forms.Panel()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Panel26 = New System.Windows.Forms.Panel()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.Panel27 = New System.Windows.Forms.Panel()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Panel28 = New System.Windows.Forms.Panel()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.Panel29 = New System.Windows.Forms.Panel()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.Panel24 = New System.Windows.Forms.Panel()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
@@ -86,6 +97,12 @@ Partial Class FluentForm
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
+        Me.Panel25.SuspendLayout()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel26.SuspendLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel28.SuspendLayout()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel24.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -119,6 +136,10 @@ Partial Class FluentForm
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(66, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Panel25)
+        Me.Panel1.Controls.Add(Me.Label16)
+        Me.Panel1.Controls.Add(Me.Panel26)
+        Me.Panel1.Controls.Add(Me.Panel28)
         Me.Panel1.Controls.Add(Me.Panel24)
         Me.Panel1.Controls.Add(Me.PictureBox7)
         Me.Panel1.Controls.Add(Me.Label15)
@@ -130,6 +151,112 @@ Partial Class FluentForm
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(200, 424)
         Me.Panel1.TabIndex = 0
+        '
+        'Panel25
+        '
+        Me.Panel25.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.Panel25.Controls.Add(Me.PictureBox9)
+        Me.Panel25.Location = New System.Drawing.Point(13, 222)
+        Me.Panel25.Name = "Panel25"
+        Me.Panel25.Size = New System.Drawing.Size(175, 1)
+        Me.Panel25.TabIndex = 11
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.BackgroundImage = CType(resources.GetObject("PictureBox9.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox9.Location = New System.Drawing.Point(169, 0)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(6, 1)
+        Me.PictureBox9.TabIndex = 0
+        Me.PictureBox9.TabStop = False
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.Label16.Location = New System.Drawing.Point(18, 242)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(106, 21)
+        Me.Label16.TabIndex = 13
+        Me.Label16.Text = "QUICK LINKS"
+        '
+        'Panel26
+        '
+        Me.Panel26.Controls.Add(Me.PictureBox10)
+        Me.Panel26.Controls.Add(Me.Panel27)
+        Me.Panel26.Controls.Add(Me.Label17)
+        Me.Panel26.Location = New System.Drawing.Point(0, 305)
+        Me.Panel26.Name = "Panel26"
+        Me.Panel26.Size = New System.Drawing.Size(200, 40)
+        Me.Panel26.TabIndex = 12
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), System.Drawing.Image)
+        Me.PictureBox10.Location = New System.Drawing.Point(20, 10)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(20, 20)
+        Me.PictureBox10.TabIndex = 4
+        Me.PictureBox10.TabStop = False
+        '
+        'Panel27
+        '
+        Me.Panel27.BackgroundImage = CType(resources.GetObject("Panel27.BackgroundImage"), System.Drawing.Image)
+        Me.Panel27.Location = New System.Drawing.Point(180, 0)
+        Me.Panel27.Name = "Panel27"
+        Me.Panel27.Size = New System.Drawing.Size(20, 40)
+        Me.Panel27.TabIndex = 2
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.Label17.Location = New System.Drawing.Point(44, 11)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(107, 17)
+        Me.Label17.TabIndex = 0
+        Me.Label17.Text = "Acronis Upgrade"
+        '
+        'Panel28
+        '
+        Me.Panel28.Controls.Add(Me.PictureBox11)
+        Me.Panel28.Controls.Add(Me.Panel29)
+        Me.Panel28.Controls.Add(Me.Label18)
+        Me.Panel28.Location = New System.Drawing.Point(0, 265)
+        Me.Panel28.Name = "Panel28"
+        Me.Panel28.Size = New System.Drawing.Size(200, 40)
+        Me.Panel28.TabIndex = 11
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.BackgroundImage = CType(resources.GetObject("PictureBox11.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox11.Image = CType(resources.GetObject("PictureBox11.Image"), System.Drawing.Image)
+        Me.PictureBox11.Location = New System.Drawing.Point(20, 10)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(20, 20)
+        Me.PictureBox11.TabIndex = 3
+        Me.PictureBox11.TabStop = False
+        '
+        'Panel29
+        '
+        Me.Panel29.BackgroundImage = CType(resources.GetObject("Panel29.BackgroundImage"), System.Drawing.Image)
+        Me.Panel29.Location = New System.Drawing.Point(180, 0)
+        Me.Panel29.Name = "Panel29"
+        Me.Panel29.Size = New System.Drawing.Size(20, 40)
+        Me.Panel29.TabIndex = 1
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.Label18.Location = New System.Drawing.Point(44, 11)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(91, 17)
+        Me.Label18.TabIndex = 0
+        Me.Label18.Text = "Benefits Portal"
         '
         'Panel24
         '
@@ -546,7 +673,7 @@ Partial Class FluentForm
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(315, 42)
         Me.Label14.TabIndex = 2825
-        Me.Label14.Text = "Synergy - Serial Number Info File Generator" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Version 2.0.6"
+        Me.Label14.Text = "Synergy - Serial Number Info File Generator" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Version 2.1.0"
         '
         'PictureBox3
         '
@@ -699,6 +826,14 @@ Partial Class FluentForm
         Me.Text = "Synergy - Serial Number Info File Generator"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel25.ResumeLayout(False)
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel26.ResumeLayout(False)
+        Me.Panel26.PerformLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel28.ResumeLayout(False)
+        Me.Panel28.PerformLayout()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel24.ResumeLayout(False)
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
@@ -804,4 +939,15 @@ Partial Class FluentForm
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents Panel26 As System.Windows.Forms.Panel
+    Friend WithEvents PictureBox10 As System.Windows.Forms.PictureBox
+    Friend WithEvents Panel27 As System.Windows.Forms.Panel
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Panel28 As System.Windows.Forms.Panel
+    Friend WithEvents PictureBox11 As System.Windows.Forms.PictureBox
+    Friend WithEvents Panel29 As System.Windows.Forms.Panel
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents Panel25 As System.Windows.Forms.Panel
+    Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
 End Class

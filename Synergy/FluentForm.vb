@@ -493,4 +493,48 @@ Public Class FluentForm
     Private Sub Panel12_Click(sender As Object, e As EventArgs) Handles Panel12.Click
         TextBox2.Focus()
     End Sub
+
+    Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click, Panel28.Click, PictureBox11.Click
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel28, "BackColor", Color.FromArgb(64, 64, 66))
+        t.add(Panel29, "BackColor", Color.FromArgb(64, 64, 66))
+        t.run()
+        Process.Start("https://benefitsportal.gscanada.info/")
+    End Sub
+
+    Private Sub Label17_Click(sender As Object, e As EventArgs) Handles Label17.Click, Panel26.Click, PictureBox10.Click
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel26, "BackColor", Color.FromArgb(64, 64, 66))
+        t.add(Panel27, "BackColor", Color.FromArgb(64, 64, 66))
+        t.run()
+        Process.Start("https://acronisportal.gscanada.info/")
+    End Sub
+
+    Private Sub Label18_MouseEnter(sender As Object, e As EventArgs) Handles Label18.MouseEnter, Panel28.MouseEnter, PictureBox11.MouseEnter
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel28, "BackColor", Color.FromArgb(90, 90, 90))
+        t.add(Panel29, "BackColor", Color.FromArgb(90, 90, 90))
+        t.run()
+    End Sub
+
+    Private Sub Label17_MouseEnter(sender As Object, e As EventArgs) Handles Label17.MouseEnter, Panel26.MouseEnter, PictureBox10.MouseEnter
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel26, "BackColor", Color.FromArgb(90, 90, 90))
+        t.add(Panel27, "BackColor", Color.FromArgb(90, 90, 90))
+        t.run()
+    End Sub
+
+    Private Sub Label18_MouseLeave(sender As Object, e As EventArgs) Handles Label18.MouseLeave, Panel28.MouseLeave, PictureBox11.MouseLeave
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel28, "BackColor", Color.FromArgb(64, 64, 66))
+        t.add(Panel29, "BackColor", Color.FromArgb(64, 64, 66))
+        t.run()
+    End Sub
+
+    Private Sub Label17_MouseLeave(sender As Object, e As EventArgs) Handles Label17.MouseLeave, Panel26.MouseLeave, PictureBox10.MouseLeave
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel26, "BackColor", Color.FromArgb(64, 64, 66))
+        t.add(Panel27, "BackColor", Color.FromArgb(64, 64, 66))
+        t.run()
+    End Sub
 End Class
