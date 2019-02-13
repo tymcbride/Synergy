@@ -23,6 +23,14 @@ Synergy
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Synergy.My.Resources.Resources.Sidebar_Recent_Grey">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Synergy.My.Resources.Resources.Sidebar_Recent_White">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Synergy.My.Resources.Resources.Sidebar_Settings_Grey">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

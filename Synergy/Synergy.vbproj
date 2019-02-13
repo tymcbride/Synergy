@@ -143,6 +143,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon_Fluent_C.ico" />
+    <None Include="Resources\Sidebar_Recent_Grey.png" />
+    <None Include="Resources\Sidebar_Recent_White.png" />
     <None Include="Resources\Sidebar_Member_Grey.png" />
     <None Include="Resources\Sidebar_Ultimate_White.png" />
     <None Include="Resources\Sidebar_Ultimate_Grey.png" />

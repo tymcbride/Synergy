@@ -77,6 +77,126 @@ Namespace My
                 Me("TitleText") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("N/A")>  _
+        Public Property Recent1_G() As String
+            Get
+                Return CType(Me("Recent1_G"),String)
+            End Get
+            Set
+                Me("Recent1_G") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("N/A")>  _
+        Public Property Recent1_B() As String
+            Get
+                Return CType(Me("Recent1_B"),String)
+            End Get
+            Set
+                Me("Recent1_B") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("N/A")>  _
+        Public Property Recent1_A() As String
+            Get
+                Return CType(Me("Recent1_A"),String)
+            End Get
+            Set
+                Me("Recent1_A") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("N/A")>  _
+        Public Property Recent2_G() As String
+            Get
+                Return CType(Me("Recent2_G"),String)
+            End Get
+            Set
+                Me("Recent2_G") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("N/A")>  _
+        Public Property Recent2_B() As String
+            Get
+                Return CType(Me("Recent2_B"),String)
+            End Get
+            Set
+                Me("Recent2_B") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("N/A")>  _
+        Public Property Recent2_A() As String
+            Get
+                Return CType(Me("Recent2_A"),String)
+            End Get
+            Set
+                Me("Recent2_A") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("N/A")>  _
+        Public Property Recent3_G() As String
+            Get
+                Return CType(Me("Recent3_G"),String)
+            End Get
+            Set
+                Me("Recent3_G") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("N/A")>  _
+        Public Property Recent3_B() As String
+            Get
+                Return CType(Me("Recent3_B"),String)
+            End Get
+            Set
+                Me("Recent3_B") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("N/A")>  _
+        Public Property Recent3_A() As String
+            Get
+                Return CType(Me("Recent3_A"),String)
+            End Get
+            Set
+                Me("Recent3_A") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property CallUpgrade() As Boolean
+            Get
+                Return CType(Me("CallUpgrade"),Boolean)
+            End Get
+            Set
+                Me("CallUpgrade") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

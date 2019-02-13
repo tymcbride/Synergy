@@ -25,6 +25,8 @@ Partial Class FluentForm
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FluentForm))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel37 = New System.Windows.Forms.Panel()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.Panel25 = New System.Windows.Forms.Panel()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -59,7 +61,6 @@ Partial Class FluentForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -78,10 +79,11 @@ Partial Class FluentForm
         Me.FlashTimerB = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel17 = New System.Windows.Forms.Panel()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Panel38 = New System.Windows.Forms.Panel()
+        Me.Panel39 = New System.Windows.Forms.Panel()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
         Me.Panel18 = New System.Windows.Forms.Panel()
         Me.Panel19 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -96,7 +98,42 @@ Partial Class FluentForm
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel30 = New System.Windows.Forms.Panel()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Panel35 = New System.Windows.Forms.Panel()
+        Me.Panel36 = New System.Windows.Forms.Panel()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Panel33 = New System.Windows.Forms.Panel()
+        Me.Panel34 = New System.Windows.Forms.Panel()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Panel31 = New System.Windows.Forms.Panel()
+        Me.Panel32 = New System.Windows.Forms.Panel()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Timer5 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
+        Me.Panel37.SuspendLayout()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel25.SuspendLayout()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel26.SuspendLayout()
@@ -114,7 +151,6 @@ Partial Class FluentForm
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel9.SuspendLayout()
@@ -124,18 +160,28 @@ Partial Class FluentForm
         Me.Panel16.SuspendLayout()
         Me.Panel13.SuspendLayout()
         Me.Panel17.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel38.SuspendLayout()
+        Me.Panel39.SuspendLayout()
         Me.Panel18.SuspendLayout()
         Me.Panel19.SuspendLayout()
         Me.Panel20.SuspendLayout()
         Me.Panel21.SuspendLayout()
         Me.Panel22.SuspendLayout()
         Me.Panel23.SuspendLayout()
+        Me.Panel30.SuspendLayout()
+        Me.Panel35.SuspendLayout()
+        Me.Panel36.SuspendLayout()
+        Me.Panel33.SuspendLayout()
+        Me.Panel34.SuspendLayout()
+        Me.Panel31.SuspendLayout()
+        Me.Panel32.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(66, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Panel37)
         Me.Panel1.Controls.Add(Me.Panel25)
         Me.Panel1.Controls.Add(Me.Label16)
         Me.Panel1.Controls.Add(Me.Panel26)
@@ -151,6 +197,24 @@ Partial Class FluentForm
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(200, 424)
         Me.Panel1.TabIndex = 0
+        '
+        'Panel37
+        '
+        Me.Panel37.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.Panel37.Controls.Add(Me.PictureBox12)
+        Me.Panel37.Location = New System.Drawing.Point(13, 315)
+        Me.Panel37.Name = "Panel37"
+        Me.Panel37.Size = New System.Drawing.Size(175, 1)
+        Me.Panel37.TabIndex = 14
+        '
+        'PictureBox12
+        '
+        Me.PictureBox12.BackgroundImage = CType(resources.GetObject("PictureBox12.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox12.Location = New System.Drawing.Point(169, 0)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(6, 1)
+        Me.PictureBox12.TabIndex = 0
+        Me.PictureBox12.TabStop = False
         '
         'Panel25
         '
@@ -186,14 +250,14 @@ Partial Class FluentForm
         Me.Panel26.Controls.Add(Me.PictureBox10)
         Me.Panel26.Controls.Add(Me.Panel27)
         Me.Panel26.Controls.Add(Me.Label17)
-        Me.Panel26.Location = New System.Drawing.Point(0, 305)
+        Me.Panel26.Location = New System.Drawing.Point(0, 341)
         Me.Panel26.Name = "Panel26"
         Me.Panel26.Size = New System.Drawing.Size(200, 40)
         Me.Panel26.TabIndex = 12
         '
         'PictureBox10
         '
-        Me.PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), System.Drawing.Image)
+        Me.PictureBox10.BackgroundImage = Global.Synergy.My.Resources.Resources.Sidebar_Recent_Grey
         Me.PictureBox10.Location = New System.Drawing.Point(20, 10)
         Me.PictureBox10.Name = "PictureBox10"
         Me.PictureBox10.Size = New System.Drawing.Size(20, 20)
@@ -215,9 +279,9 @@ Partial Class FluentForm
         Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(113, Byte), Integer))
         Me.Label17.Location = New System.Drawing.Point(44, 11)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(107, 17)
+        Me.Label17.Size = New System.Drawing.Size(95, 17)
         Me.Label17.TabIndex = 0
-        Me.Label17.Text = "Acronis Upgrade"
+        Me.Label17.Text = "Recently Saved"
         '
         'Panel28
         '
@@ -489,15 +553,6 @@ Partial Class FluentForm
         Me.Label5.TabIndex = 2802
         Me.Label5.Text = "Acronis Serial"
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(200, 70)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(516, 20)
-        Me.PictureBox2.TabIndex = 2804
-        Me.PictureBox2.TabStop = False
-        '
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -635,11 +690,11 @@ Partial Class FluentForm
         '
         'Panel17
         '
+        Me.Panel17.AutoScroll = True
         Me.Panel17.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.Panel17.Controls.Add(Me.Label13)
         Me.Panel17.Controls.Add(Me.Label14)
-        Me.Panel17.Controls.Add(Me.PictureBox3)
-        Me.Panel17.Controls.Add(Me.Label12)
+        Me.Panel17.Controls.Add(Me.Panel38)
+        Me.Panel17.Controls.Add(Me.Label43)
         Me.Panel17.Controls.Add(Me.Panel18)
         Me.Panel17.Controls.Add(Me.Panel20)
         Me.Panel17.Controls.Add(Me.Panel22)
@@ -650,52 +705,60 @@ Partial Class FluentForm
         Me.Panel17.TabIndex = 2815
         Me.Panel17.Visible = False
         '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 8.0!)
-        Me.Label13.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label13.Location = New System.Drawing.Point(87, 234)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(407, 39)
-        Me.Label13.TabIndex = 2826
-        Me.Label13.Text = resources.GetString("Label13.Text")
-        '
         'Label14
         '
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label14.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label14.Location = New System.Drawing.Point(87, 191)
+        Me.Label14.Location = New System.Drawing.Point(101, 263)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(315, 42)
-        Me.Label14.TabIndex = 2825
-        Me.Label14.Text = "Synergy - Serial Number Info File Generator" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Version 2.1.0"
+        Me.Label14.TabIndex = 2828
+        Me.Label14.Text = "Synergy - Serial Number Info File Generator" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Version 2.2.1 - Click to View Source" & _
+    ""
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'PictureBox3
+        'Panel38
         '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(22, 203)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(60, 60)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 2824
-        Me.PictureBox3.TabStop = False
+        Me.Panel38.Controls.Add(Me.Panel39)
+        Me.Panel38.Location = New System.Drawing.Point(21, 187)
+        Me.Panel38.Name = "Panel38"
+        Me.Panel38.Size = New System.Drawing.Size(473, 52)
+        Me.Panel38.TabIndex = 2823
         '
-        'Label12
+        'Panel39
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Label12.Location = New System.Drawing.Point(17, 161)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(65, 25)
-        Me.Label12.TabIndex = 2823
-        Me.Label12.Text = "About"
+        Me.Panel39.Controls.Add(Me.Label44)
+        Me.Panel39.Location = New System.Drawing.Point(1, 1)
+        Me.Panel39.Name = "Panel39"
+        Me.Panel39.Size = New System.Drawing.Size(471, 50)
+        Me.Panel39.TabIndex = 2813
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.BackColor = System.Drawing.Color.Transparent
+        Me.Label44.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label44.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label44.Location = New System.Drawing.Point(108, 13)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(254, 25)
+        Me.Label44.TabIndex = 2815
+        Me.Label44.Text = "Reset Recently Saved GCID's"
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.BackColor = System.Drawing.Color.Transparent
+        Me.Label43.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label43.Location = New System.Drawing.Point(17, 155)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(190, 25)
+        Me.Label43.TabIndex = 2827
+        Me.Label43.Text = "Clear Recently Saved"
         '
         'Panel18
         '
@@ -777,7 +840,7 @@ Partial Class FluentForm
         Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox5.Location = New System.Drawing.Point(10, 10)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(451, 22)
+        Me.TextBox5.Size = New System.Drawing.Size(431, 22)
         Me.TextBox5.TabIndex = 2805
         Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -800,6 +863,412 @@ Partial Class FluentForm
         '
         Me.Timer4.Interval = 1500
         '
+        'Panel30
+        '
+        Me.Panel30.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.Panel30.Controls.Add(Me.Label40)
+        Me.Panel30.Controls.Add(Me.Label41)
+        Me.Panel30.Controls.Add(Me.Label42)
+        Me.Panel30.Controls.Add(Me.Label37)
+        Me.Panel30.Controls.Add(Me.Label38)
+        Me.Panel30.Controls.Add(Me.Label39)
+        Me.Panel30.Controls.Add(Me.Label36)
+        Me.Panel30.Controls.Add(Me.Label35)
+        Me.Panel30.Controls.Add(Me.Label34)
+        Me.Panel30.Controls.Add(Me.Panel35)
+        Me.Panel30.Controls.Add(Me.Label30)
+        Me.Panel30.Controls.Add(Me.Panel33)
+        Me.Panel30.Controls.Add(Me.Label31)
+        Me.Panel30.Controls.Add(Me.Label25)
+        Me.Panel30.Controls.Add(Me.Label32)
+        Me.Panel30.Controls.Add(Me.Panel31)
+        Me.Panel30.Controls.Add(Me.Label33)
+        Me.Panel30.Controls.Add(Me.Label26)
+        Me.Panel30.Controls.Add(Me.Label23)
+        Me.Panel30.Controls.Add(Me.Label27)
+        Me.Panel30.Controls.Add(Me.Label22)
+        Me.Panel30.Controls.Add(Me.Label28)
+        Me.Panel30.Controls.Add(Me.Label19)
+        Me.Panel30.Controls.Add(Me.Label24)
+        Me.Panel30.Location = New System.Drawing.Point(200, 90)
+        Me.Panel30.Name = "Panel30"
+        Me.Panel30.Size = New System.Drawing.Size(516, 334)
+        Me.Panel30.TabIndex = 2816
+        Me.Panel30.Visible = False
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.BackColor = System.Drawing.Color.Transparent
+        Me.Label40.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label40.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.Label40.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label40.Location = New System.Drawing.Point(267, 243)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(26, 13)
+        Me.Label40.TabIndex = 2844
+        Me.Label40.Text = "N/A"
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.BackColor = System.Drawing.Color.Transparent
+        Me.Label41.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label41.Font = New System.Drawing.Font("Segoe UI", 6.0!)
+        Me.Label41.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label41.Location = New System.Drawing.Point(73, 261)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(19, 11)
+        Me.Label41.TabIndex = 2843
+        Me.Label41.Text = "N/A"
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.BackColor = System.Drawing.Color.Transparent
+        Me.Label42.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label42.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.Label42.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label42.Location = New System.Drawing.Point(73, 243)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(26, 13)
+        Me.Label42.TabIndex = 2842
+        Me.Label42.Text = "N/A"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.BackColor = System.Drawing.Color.Transparent
+        Me.Label37.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label37.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.Label37.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label37.Location = New System.Drawing.Point(267, 136)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(26, 13)
+        Me.Label37.TabIndex = 2841
+        Me.Label37.Text = "N/A"
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.BackColor = System.Drawing.Color.Transparent
+        Me.Label38.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label38.Font = New System.Drawing.Font("Segoe UI", 6.0!)
+        Me.Label38.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label38.Location = New System.Drawing.Point(73, 154)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(19, 11)
+        Me.Label38.TabIndex = 2840
+        Me.Label38.Text = "N/A"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.BackColor = System.Drawing.Color.Transparent
+        Me.Label39.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label39.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.Label39.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label39.Location = New System.Drawing.Point(73, 136)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(26, 13)
+        Me.Label39.TabIndex = 2839
+        Me.Label39.Text = "N/A"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.BackColor = System.Drawing.Color.Transparent
+        Me.Label36.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label36.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.Label36.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label36.Location = New System.Drawing.Point(267, 29)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(26, 13)
+        Me.Label36.TabIndex = 2838
+        Me.Label36.Text = "N/A"
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.BackColor = System.Drawing.Color.Transparent
+        Me.Label35.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label35.Font = New System.Drawing.Font("Segoe UI", 6.0!)
+        Me.Label35.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label35.Location = New System.Drawing.Point(73, 47)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(19, 11)
+        Me.Label35.TabIndex = 2837
+        Me.Label35.Text = "N/A"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.BackColor = System.Drawing.Color.Transparent
+        Me.Label34.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label34.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.Label34.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label34.Location = New System.Drawing.Point(73, 29)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(26, 13)
+        Me.Label34.TabIndex = 2836
+        Me.Label34.Text = "N/A"
+        '
+        'Panel35
+        '
+        Me.Panel35.Controls.Add(Me.Panel36)
+        Me.Panel35.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Panel35.Location = New System.Drawing.Point(22, 282)
+        Me.Panel35.Name = "Panel35"
+        Me.Panel35.Size = New System.Drawing.Size(472, 32)
+        Me.Panel35.TabIndex = 2835
+        '
+        'Panel36
+        '
+        Me.Panel36.Controls.Add(Me.Label29)
+        Me.Panel36.Location = New System.Drawing.Point(1, 1)
+        Me.Panel36.Name = "Panel36"
+        Me.Panel36.Size = New System.Drawing.Size(470, 30)
+        Me.Panel36.TabIndex = 2813
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.BackColor = System.Drawing.Color.Transparent
+        Me.Label29.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label29.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label29.Location = New System.Drawing.Point(150, 6)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(170, 19)
+        Me.Label29.TabIndex = 2815
+        Me.Label29.Text = "Re-Save to Default Folder"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.BackColor = System.Drawing.Color.Transparent
+        Me.Label30.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label30.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.Label30.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label30.Location = New System.Drawing.Point(19, 260)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(48, 13)
+        Me.Label30.TabIndex = 2834
+        Me.Label30.Text = "Acronis:"
+        '
+        'Panel33
+        '
+        Me.Panel33.Controls.Add(Me.Panel34)
+        Me.Panel33.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Panel33.Location = New System.Drawing.Point(22, 175)
+        Me.Panel33.Name = "Panel33"
+        Me.Panel33.Size = New System.Drawing.Size(472, 32)
+        Me.Panel33.TabIndex = 2835
+        '
+        'Panel34
+        '
+        Me.Panel34.Controls.Add(Me.Label21)
+        Me.Panel34.Location = New System.Drawing.Point(1, 1)
+        Me.Panel34.Name = "Panel34"
+        Me.Panel34.Size = New System.Drawing.Size(470, 30)
+        Me.Panel34.TabIndex = 2813
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.BackColor = System.Drawing.Color.Transparent
+        Me.Label21.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label21.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label21.Location = New System.Drawing.Point(150, 6)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(170, 19)
+        Me.Label21.TabIndex = 2815
+        Me.Label21.Text = "Re-Save to Default Folder"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.BackColor = System.Drawing.Color.Transparent
+        Me.Label31.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label31.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.Label31.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label31.Location = New System.Drawing.Point(190, 243)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(71, 13)
+        Me.Label31.TabIndex = 2833
+        Me.Label31.Text = "Bitdefender:"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.BackColor = System.Drawing.Color.Transparent
+        Me.Label25.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label25.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.Label25.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label25.Location = New System.Drawing.Point(19, 153)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(48, 13)
+        Me.Label25.TabIndex = 2834
+        Me.Label25.Text = "Acronis:"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.BackColor = System.Drawing.Color.Transparent
+        Me.Label32.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label32.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.Label32.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label32.Location = New System.Drawing.Point(19, 243)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(36, 13)
+        Me.Label32.TabIndex = 2832
+        Me.Label32.Text = "GCID:"
+        '
+        'Panel31
+        '
+        Me.Panel31.Controls.Add(Me.Panel32)
+        Me.Panel31.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Panel31.Location = New System.Drawing.Point(22, 68)
+        Me.Panel31.Name = "Panel31"
+        Me.Panel31.Size = New System.Drawing.Size(472, 32)
+        Me.Panel31.TabIndex = 2830
+        '
+        'Panel32
+        '
+        Me.Panel32.Controls.Add(Me.Label20)
+        Me.Panel32.Location = New System.Drawing.Point(1, 1)
+        Me.Panel32.Name = "Panel32"
+        Me.Panel32.Size = New System.Drawing.Size(470, 30)
+        Me.Panel32.TabIndex = 2813
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.BackColor = System.Drawing.Color.Transparent
+        Me.Label20.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label20.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label20.Location = New System.Drawing.Point(150, 6)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(170, 19)
+        Me.Label20.TabIndex = 2815
+        Me.Label20.Text = "Re-Save to Default Folder"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.BackColor = System.Drawing.Color.Transparent
+        Me.Label33.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label33.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label33.Location = New System.Drawing.Point(17, 214)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(153, 25)
+        Me.Label33.TabIndex = 2831
+        Me.Label33.Text = "3rd Most Recent"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.BackColor = System.Drawing.Color.Transparent
+        Me.Label26.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label26.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.Label26.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label26.Location = New System.Drawing.Point(190, 136)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(71, 13)
+        Me.Label26.TabIndex = 2833
+        Me.Label26.Text = "Bitdefender:"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.BackColor = System.Drawing.Color.Transparent
+        Me.Label23.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label23.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.Label23.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label23.Location = New System.Drawing.Point(19, 46)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(48, 13)
+        Me.Label23.TabIndex = 2829
+        Me.Label23.Text = "Acronis:"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.BackColor = System.Drawing.Color.Transparent
+        Me.Label27.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label27.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.Label27.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label27.Location = New System.Drawing.Point(19, 136)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(36, 13)
+        Me.Label27.TabIndex = 2832
+        Me.Label27.Text = "GCID:"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.BackColor = System.Drawing.Color.Transparent
+        Me.Label22.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label22.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.Label22.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label22.Location = New System.Drawing.Point(190, 29)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(71, 13)
+        Me.Label22.TabIndex = 2828
+        Me.Label22.Text = "Bitdefender:"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.BackColor = System.Drawing.Color.Transparent
+        Me.Label28.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label28.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label28.Location = New System.Drawing.Point(17, 107)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(157, 25)
+        Me.Label28.TabIndex = 2831
+        Me.Label28.Text = "2nd Most Recent"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.BackColor = System.Drawing.Color.Transparent
+        Me.Label19.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label19.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.Label19.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label19.Location = New System.Drawing.Point(19, 29)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(36, 13)
+        Me.Label19.TabIndex = 2826
+        Me.Label19.Text = "GCID:"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.BackColor = System.Drawing.Color.Transparent
+        Me.Label24.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label24.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label24.Location = New System.Drawing.Point(17, 0)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(119, 25)
+        Me.Label24.TabIndex = 2819
+        Me.Label24.Text = "Most Recent"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(200, 70)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(516, 20)
+        Me.PictureBox2.TabIndex = 2804
+        Me.PictureBox2.TabStop = False
+        '
+        'Timer5
+        '
+        Me.Timer5.Interval = 2000
+        '
         'FluentForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -818,6 +1287,7 @@ Partial Class FluentForm
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Panel17)
+        Me.Controls.Add(Me.Panel30)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -826,6 +1296,8 @@ Partial Class FluentForm
         Me.Text = "Synergy - Serial Number Info File Generator"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel37.ResumeLayout(False)
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel25.ResumeLayout(False)
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel26.ResumeLayout(False)
@@ -849,7 +1321,6 @@ Partial Class FluentForm
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel8.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
@@ -864,7 +1335,9 @@ Partial Class FluentForm
         Me.Panel13.PerformLayout()
         Me.Panel17.ResumeLayout(False)
         Me.Panel17.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel38.ResumeLayout(False)
+        Me.Panel39.ResumeLayout(False)
+        Me.Panel39.PerformLayout()
         Me.Panel18.ResumeLayout(False)
         Me.Panel19.ResumeLayout(False)
         Me.Panel19.PerformLayout()
@@ -874,6 +1347,18 @@ Partial Class FluentForm
         Me.Panel22.ResumeLayout(False)
         Me.Panel23.ResumeLayout(False)
         Me.Panel23.PerformLayout()
+        Me.Panel30.ResumeLayout(False)
+        Me.Panel30.PerformLayout()
+        Me.Panel35.ResumeLayout(False)
+        Me.Panel36.ResumeLayout(False)
+        Me.Panel36.PerformLayout()
+        Me.Panel33.ResumeLayout(False)
+        Me.Panel34.ResumeLayout(False)
+        Me.Panel34.PerformLayout()
+        Me.Panel31.ResumeLayout(False)
+        Me.Panel32.ResumeLayout(False)
+        Me.Panel32.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -923,10 +1408,6 @@ Partial Class FluentForm
     Friend WithEvents FolderBrowserDialog1 As System.Windows.Forms.FolderBrowserDialog
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
     Friend WithEvents Timer3 As System.Windows.Forms.Timer
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
@@ -950,4 +1431,43 @@ Partial Class FluentForm
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Panel25 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
+    Friend WithEvents Panel30 As System.Windows.Forms.Panel
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents Panel31 As System.Windows.Forms.Panel
+    Friend WithEvents Panel32 As System.Windows.Forms.Panel
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents Panel35 As System.Windows.Forms.Panel
+    Friend WithEvents Panel36 As System.Windows.Forms.Panel
+    Friend WithEvents Label29 As System.Windows.Forms.Label
+    Friend WithEvents Label30 As System.Windows.Forms.Label
+    Friend WithEvents Panel33 As System.Windows.Forms.Panel
+    Friend WithEvents Panel34 As System.Windows.Forms.Panel
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents Label31 As System.Windows.Forms.Label
+    Friend WithEvents Label25 As System.Windows.Forms.Label
+    Friend WithEvents Label32 As System.Windows.Forms.Label
+    Friend WithEvents Label33 As System.Windows.Forms.Label
+    Friend WithEvents Label26 As System.Windows.Forms.Label
+    Friend WithEvents Label27 As System.Windows.Forms.Label
+    Friend WithEvents Label28 As System.Windows.Forms.Label
+    Friend WithEvents Panel37 As System.Windows.Forms.Panel
+    Friend WithEvents PictureBox12 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label40 As System.Windows.Forms.Label
+    Friend WithEvents Label41 As System.Windows.Forms.Label
+    Friend WithEvents Label42 As System.Windows.Forms.Label
+    Friend WithEvents Label37 As System.Windows.Forms.Label
+    Friend WithEvents Label38 As System.Windows.Forms.Label
+    Friend WithEvents Label39 As System.Windows.Forms.Label
+    Friend WithEvents Label36 As System.Windows.Forms.Label
+    Friend WithEvents Label35 As System.Windows.Forms.Label
+    Friend WithEvents Label34 As System.Windows.Forms.Label
+    Friend WithEvents Timer5 As System.Windows.Forms.Timer
+    Friend WithEvents Panel38 As System.Windows.Forms.Panel
+    Friend WithEvents Panel39 As System.Windows.Forms.Panel
+    Friend WithEvents Label43 As System.Windows.Forms.Label
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Label44 As System.Windows.Forms.Label
 End Class

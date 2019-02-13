@@ -15,17 +15,36 @@ Public Class FluentForm
     Dim FlashTimerCount As Integer = 0
 
     Private Sub FluentForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Previous Setting Load
+        If My.Settings.CallUpgrade = True Then
+            My.Settings.Upgrade()
+            My.Settings.CallUpgrade = False
+        End If
+
         Label9.Text = My.Settings.TitleText
         TextBox5.Text = My.Settings.FolderLocation
+
+        Label34.Text = My.Settings.Recent1_G
+        Label36.Text = My.Settings.Recent1_B
+        Label35.Text = My.Settings.Recent1_A
+        Label39.Text = My.Settings.Recent2_G
+        Label37.Text = My.Settings.Recent2_B
+        Label38.Text = My.Settings.Recent2_A
+        Label42.Text = My.Settings.Recent3_G
+        Label40.Text = My.Settings.Recent3_B
+        Label41.Text = My.Settings.Recent3_A
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click, Panel2.Click, PictureBox4.Click
         Panel17.Visible = False
+        Panel30.Visible = False
+        Label30.SendToBack()
         Panel17.SendToBack()
         KeyType = "G"
         PictureBox4.BackgroundImage = My.Resources.Sidebar_Member_White
         PictureBox5.BackgroundImage = My.Resources.Sidebar_Ultimate_Grey
         PictureBox6.BackgroundImage = My.Resources.Sidebar_Settings_Grey
+        PictureBox10.BackgroundImage = My.Resources.Sidebar_Recent_Grey
         TextBox2.Enabled = True
         TextBox2.BackColor = Color.White
         Panel12.BackColor = Color.White
@@ -33,16 +52,20 @@ Public Class FluentForm
         t.add(Label1, "ForeColor", Color.White)
         t.add(Label2, "ForeColor", Color.FromArgb(112, 110, 113))
         t.add(Label7, "ForeColor", Color.FromArgb(112, 110, 113))
+        t.add(Label17, "ForeColor", Color.FromArgb(112, 110, 113))
         t.run()
     End Sub
 
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click, Panel3.Click, PictureBox5.Click
         Panel17.Visible = False
+        Panel30.Visible = False
+        Label30.SendToBack()
         Panel17.SendToBack()
         KeyType = "U"
         PictureBox4.BackgroundImage = My.Resources.Sidebar_Member_Grey
         PictureBox5.BackgroundImage = My.Resources.Sidebar_Ultimate_White
         PictureBox6.BackgroundImage = My.Resources.Sidebar_Settings_Grey
+        PictureBox10.BackgroundImage = My.Resources.Sidebar_Recent_Grey
         TextBox2.Enabled = False
         TextBox2.BackColor = Color.FromArgb(240, 240, 240)
         Panel12.BackColor = Color.FromArgb(240, 240, 240)
@@ -50,6 +73,7 @@ Public Class FluentForm
         t.add(Label2, "ForeColor", Color.White)
         t.add(Label1, "ForeColor", Color.FromArgb(112, 110, 113))
         t.add(Label7, "ForeColor", Color.FromArgb(112, 110, 113))
+        t.add(Label17, "ForeColor", Color.FromArgb(112, 110, 113))
         t.run()
     End Sub
 
@@ -84,13 +108,17 @@ Public Class FluentForm
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click, Panel14.Click, PictureBox6.Click
         Panel17.Visible = True
         Panel17.BringToFront()
+        Panel30.Visible = False
+        Panel30.SendToBack()
         PictureBox4.BackgroundImage = My.Resources.Sidebar_Member_Grey
         PictureBox5.BackgroundImage = My.Resources.Sidebar_Ultimate_Grey
         PictureBox6.BackgroundImage = My.Resources.Sidebar_Settings_White
+        PictureBox10.BackgroundImage = My.Resources.Sidebar_Recent_Grey
         Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
         t.add(Label7, "ForeColor", Color.White)
         t.add(Label2, "ForeColor", Color.FromArgb(112, 110, 113))
         t.add(Label1, "ForeColor", Color.FromArgb(112, 110, 113))
+        t.add(Label17, "ForeColor", Color.FromArgb(112, 110, 113))
         t.run()
     End Sub
 
@@ -183,6 +211,31 @@ Public Class FluentForm
         Panel12.BackColor = Color.FromArgb(200, 230, 201)
         Label6.Location = New Point(26, 13)
         Label6.Text = "File Saved Successfully"
+
+        'Recent Files
+        My.Settings.Recent3_G = My.Settings.Recent2_G
+        My.Settings.Recent3_B = My.Settings.Recent2_B
+        My.Settings.Recent3_A = My.Settings.Recent2_A
+        My.Settings.Recent2_G = My.Settings.Recent1_G
+        My.Settings.Recent2_B = My.Settings.Recent1_B
+        My.Settings.Recent2_A = My.Settings.Recent1_A
+        My.Settings.Recent1_G = TextBox3.Text
+        My.Settings.Recent1_B = TextBox1.Text
+        If KeyType = "U" Then
+            My.Settings.Recent1_A = "N/A"
+        Else
+            My.Settings.Recent1_A = TextBox2.Text
+        End If
+        Label34.Text = My.Settings.Recent1_G
+        Label36.Text = My.Settings.Recent1_B
+        Label35.Text = My.Settings.Recent1_A
+        Label39.Text = My.Settings.Recent2_G
+        Label37.Text = My.Settings.Recent2_B
+        Label38.Text = My.Settings.Recent2_A
+        Label42.Text = My.Settings.Recent3_G
+        Label40.Text = My.Settings.Recent3_B
+        Label41.Text = My.Settings.Recent3_A
+
         Timer1.Enabled = True
         Exit Sub
 
@@ -472,10 +525,6 @@ Public Class FluentForm
         Timer4.Enabled = True
     End Sub
 
-    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
-        Process.Start("https://github.com/tymcbride/Synergy")
-    End Sub
-
     Private Sub Timer4_Tick(sender As Object, e As EventArgs) Handles Timer4.Tick
         Panel23.BackColor = Color.White
         TextBox5.BackColor = Color.White
@@ -503,11 +552,20 @@ Public Class FluentForm
     End Sub
 
     Private Sub Label17_Click(sender As Object, e As EventArgs) Handles Label17.Click, Panel26.Click, PictureBox10.Click
+        Panel30.Visible = True
+        Panel30.BringToFront()
+        Panel17.Visible = False
+        Panel17.SendToBack()
+        PictureBox4.BackgroundImage = My.Resources.Sidebar_Member_Grey
+        PictureBox5.BackgroundImage = My.Resources.Sidebar_Ultimate_Grey
+        PictureBox6.BackgroundImage = My.Resources.Sidebar_Settings_Grey
+        PictureBox10.BackgroundImage = My.Resources.Sidebar_Recent_White
         Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
-        t.add(Panel26, "BackColor", Color.FromArgb(64, 64, 66))
-        t.add(Panel27, "BackColor", Color.FromArgb(64, 64, 66))
+        t.add(Label17, "ForeColor", Color.White)
+        t.add(Label2, "ForeColor", Color.FromArgb(112, 110, 113))
+        t.add(Label1, "ForeColor", Color.FromArgb(112, 110, 113))
+        t.add(Label7, "ForeColor", Color.FromArgb(112, 110, 113))
         t.run()
-        Process.Start("https://acronisportal.gscanada.info/")
     End Sub
 
     Private Sub Label18_MouseEnter(sender As Object, e As EventArgs) Handles Label18.MouseEnter, Panel28.MouseEnter, PictureBox11.MouseEnter
@@ -536,5 +594,315 @@ Public Class FluentForm
         t.add(Panel26, "BackColor", Color.FromArgb(64, 64, 66))
         t.add(Panel27, "BackColor", Color.FromArgb(64, 64, 66))
         t.run()
+    End Sub
+
+    Private Sub Label20_Click(sender As Object, e As EventArgs) Handles Label20.Click, Panel31.Click, Panel32.Click
+        If My.Settings.Recent1_G = "N/A" Then
+            MsgBox("There is no information here to resave a file.")
+        Else
+            'Store
+            GCID_Old = My.Settings.Recent1_G
+            GCID_Store = "0" + GCID_Old.Substring(0, 3)
+
+            'Till
+            GCID_Till = GCID_Old.Remove(0, 9)
+            GCID_Till = "0" + GCID_Till.Substring(0, 2)
+
+            'Invoice
+            GCID_Invoice = GCID_Old.Remove(0, 11)
+
+            'Month
+            GCID_Month = GCID_Old.Remove(0, 5)
+            GCID_Month = GCID_Month.Substring(0, 2)
+
+            'Day
+            GCID_Day = GCID_Old.Remove(0, 7)
+            GCID_Day = GCID_Day.Substring(0, 2)
+
+            'Year
+            GCID_Year = GCID_Old.Remove(0, 3)
+            GCID_Year = GCID_Year.Substring(0, 2)
+
+            'Generate Password
+            GCID_Password = GCID_Store + GCID_Till + GCID_Invoice + GCID_Month + GCID_Day + GCID_Year
+
+            If My.Settings.Recent1_A = "N/A" = False Then
+                'GSHM Setup
+                RichTextBox1.Text = "Bitdefender Serial Number: " + My.Settings.Recent1_B + vbNewLine + "Bitdefender Password: " + GCID_Password + "Gs" + vbNewLine + vbNewLine + "Acronis Serial Number: " + My.Settings.Recent1_A + vbNewLine + "Acronis Password: " + GCID_Password
+            Else
+                'Ultimate Setup
+                RichTextBox1.Text = "Bitdefender Serial Number: " + My.Settings.Recent1_B + vbNewLine + "Bitdefender Password: " + GCID_Password + "Gs"
+            End If
+
+            'Save File
+            If System.IO.File.Exists(My.Settings.FolderLocation + "\" + GCID_Store + "-" + GCID_Till + "-" + GCID_Invoice + ".txt") Then
+                Dim result As Integer = MessageBox.Show("A file with this GCID already exists. Do you wish to over-write it?", "GCID Info File Already Exists", MessageBoxButtons.YesNo)
+                If result = DialogResult.No Then
+                    Exit Sub
+                ElseIf result = DialogResult.Yes Then
+
+                End If
+            End If
+            RichTextBox1.SaveFile(My.Settings.FolderLocation + "\" + GCID_Store + "-" + GCID_Till + "-" + GCID_Invoice + ".txt", RichTextBoxStreamType.PlainText)
+            RichTextBox1.Text = ""
+            Label20.Text = "File Saved Successfully"
+            Timer5.Enabled = True
+        End If
+    End Sub
+
+    Private Sub Label20_MouseDown(sender As Object, e As MouseEventArgs) Handles Label20.MouseDown, Panel32.MouseDown
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel32, "BackColor", Color.FromArgb(200, 200, 200))
+        t.add(Panel31, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+    Private Sub Label20_MouseEnter(sender As Object, e As EventArgs) Handles Label20.MouseEnter, Panel32.MouseEnter
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel32, "BackColor", Color.White)
+        t.add(Panel31, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+    Private Sub Label20_MouseLeave(sender As Object, e As EventArgs) Handles Label20.MouseLeave, Panel32.MouseLeave
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel32, "BackColor", Color.FromArgb(251, 252, 252))
+        t.add(Panel31, "BackColor", Color.FromArgb(251, 252, 252))
+        t.run()
+    End Sub
+
+    Private Sub Label20_MouseUp(sender As Object, e As MouseEventArgs) Handles Label20.MouseUp, Panel32.MouseUp
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel32, "BackColor", Color.White)
+        t.add(Panel31, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+
+    Private Sub Label21_MouseDown(sender As Object, e As MouseEventArgs) Handles Label21.MouseDown, Panel34.MouseDown
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel34, "BackColor", Color.FromArgb(200, 200, 200))
+        t.add(Panel33, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+    Private Sub Label21_MouseEnter(sender As Object, e As EventArgs) Handles Label21.MouseEnter, Panel34.MouseEnter
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel34, "BackColor", Color.White)
+        t.add(Panel33, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+    Private Sub Label21_MouseLeave(sender As Object, e As EventArgs) Handles Label21.MouseLeave, Panel34.MouseLeave
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel34, "BackColor", Color.FromArgb(251, 252, 252))
+        t.add(Panel33, "BackColor", Color.FromArgb(251, 252, 252))
+        t.run()
+    End Sub
+
+    Private Sub Label21_MouseUp(sender As Object, e As MouseEventArgs) Handles Label21.MouseUp, Panel34.MouseUp
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel34, "BackColor", Color.White)
+        t.add(Panel33, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+    Private Sub Label29_MouseDown(sender As Object, e As MouseEventArgs) Handles Label29.MouseDown, Panel36.MouseDown
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel36, "BackColor", Color.FromArgb(200, 200, 200))
+        t.add(Panel35, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+    Private Sub Label29_MouseEnter(sender As Object, e As EventArgs) Handles Label29.MouseEnter, Panel36.MouseEnter
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel36, "BackColor", Color.White)
+        t.add(Panel35, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+    Private Sub Label29_MouseLeave(sender As Object, e As EventArgs) Handles Label29.MouseLeave, Panel36.MouseLeave
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel36, "BackColor", Color.FromArgb(251, 252, 252))
+        t.add(Panel35, "BackColor", Color.FromArgb(251, 252, 252))
+        t.run()
+    End Sub
+
+    Private Sub Label29_MouseUp(sender As Object, e As MouseEventArgs) Handles Label29.MouseUp, Panel36.MouseUp
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel36, "BackColor", Color.White)
+        t.add(Panel35, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+    Private Sub Label21_Click(sender As Object, e As EventArgs) Handles Label21.Click, Panel33.Click, Panel34.Click
+        If My.Settings.Recent1_G = "N/A" Then
+            MsgBox("There is no information here to resave a file.")
+        Else
+            'Store
+            GCID_Old = My.Settings.Recent2_G
+            GCID_Store = "0" + GCID_Old.Substring(0, 3)
+
+            'Till
+            GCID_Till = GCID_Old.Remove(0, 9)
+            GCID_Till = "0" + GCID_Till.Substring(0, 2)
+
+            'Invoice
+            GCID_Invoice = GCID_Old.Remove(0, 11)
+
+            'Month
+            GCID_Month = GCID_Old.Remove(0, 5)
+            GCID_Month = GCID_Month.Substring(0, 2)
+
+            'Day
+            GCID_Day = GCID_Old.Remove(0, 7)
+            GCID_Day = GCID_Day.Substring(0, 2)
+
+            'Year
+            GCID_Year = GCID_Old.Remove(0, 3)
+            GCID_Year = GCID_Year.Substring(0, 2)
+
+            'Generate Password
+            GCID_Password = GCID_Store + GCID_Till + GCID_Invoice + GCID_Month + GCID_Day + GCID_Year
+
+            If My.Settings.Recent2_A = "N/A" = False Then
+                'GSHM Setup
+                RichTextBox1.Text = "Bitdefender Serial Number: " + My.Settings.Recent2_B + vbNewLine + "Bitdefender Password: " + GCID_Password + "Gs" + vbNewLine + vbNewLine + "Acronis Serial Number: " + My.Settings.Recent2_A + vbNewLine + "Acronis Password: " + GCID_Password
+            Else
+                'Ultimate Setup
+                RichTextBox1.Text = "Bitdefender Serial Number: " + My.Settings.Recent2_B + vbNewLine + "Bitdefender Password: " + GCID_Password + "Gs"
+            End If
+
+            'Save File
+            If System.IO.File.Exists(My.Settings.FolderLocation + "\" + GCID_Store + "-" + GCID_Till + "-" + GCID_Invoice + ".txt") Then
+                Dim result As Integer = MessageBox.Show("A file with this GCID already exists. Do you wish to over-write it?", "GCID Info File Already Exists", MessageBoxButtons.YesNo)
+                If result = DialogResult.No Then
+                    Exit Sub
+                ElseIf result = DialogResult.Yes Then
+
+                End If
+            End If
+            RichTextBox1.SaveFile(My.Settings.FolderLocation + "\" + GCID_Store + "-" + GCID_Till + "-" + GCID_Invoice + ".txt", RichTextBoxStreamType.PlainText)
+            RichTextBox1.Text = ""
+            Label21.Text = "File Saved Successfully"
+            Timer5.Enabled = True
+        End If
+    End Sub
+
+    Private Sub Label29_Click(sender As Object, e As EventArgs) Handles Label29.Click, Panel35.Click, Panel36.Click
+        If My.Settings.Recent1_G = "N/A" Then
+            MsgBox("There is no information here to resave a file.")
+        Else
+            'Store
+            GCID_Old = My.Settings.Recent3_G
+            GCID_Store = "0" + GCID_Old.Substring(0, 3)
+
+            'Till
+            GCID_Till = GCID_Old.Remove(0, 9)
+            GCID_Till = "0" + GCID_Till.Substring(0, 2)
+
+            'Invoice
+            GCID_Invoice = GCID_Old.Remove(0, 11)
+
+            'Month
+            GCID_Month = GCID_Old.Remove(0, 5)
+            GCID_Month = GCID_Month.Substring(0, 2)
+
+            'Day
+            GCID_Day = GCID_Old.Remove(0, 7)
+            GCID_Day = GCID_Day.Substring(0, 2)
+
+            'Year
+            GCID_Year = GCID_Old.Remove(0, 3)
+            GCID_Year = GCID_Year.Substring(0, 2)
+
+            'Generate Password
+            GCID_Password = GCID_Store + GCID_Till + GCID_Invoice + GCID_Month + GCID_Day + GCID_Year
+
+            If My.Settings.Recent3_A = "N/A" = False Then
+                'GSHM Setup
+                RichTextBox1.Text = "Bitdefender Serial Number: " + My.Settings.Recent3_B + vbNewLine + "Bitdefender Password: " + GCID_Password + "Gs" + vbNewLine + vbNewLine + "Acronis Serial Number: " + My.Settings.Recent3_A + vbNewLine + "Acronis Password: " + GCID_Password
+            Else
+                'Ultimate Setup
+                RichTextBox1.Text = "Bitdefender Serial Number: " + My.Settings.Recent3_B + vbNewLine + "Bitdefender Password: " + GCID_Password + "Gs"
+            End If
+
+            'Save File
+            If System.IO.File.Exists(My.Settings.FolderLocation + "\" + GCID_Store + "-" + GCID_Till + "-" + GCID_Invoice + ".txt") Then
+                Dim result As Integer = MessageBox.Show("A file with this GCID already exists. Do you wish to over-write it?", "GCID Info File Already Exists", MessageBoxButtons.YesNo)
+                If result = DialogResult.No Then
+                    Exit Sub
+                ElseIf result = DialogResult.Yes Then
+
+                End If
+            End If
+            RichTextBox1.SaveFile(My.Settings.FolderLocation + "\" + GCID_Store + "-" + GCID_Till + "-" + GCID_Invoice + ".txt", RichTextBoxStreamType.PlainText)
+            RichTextBox1.Text = ""
+            Label29.Text = "File Saved Successfully"
+            Timer5.Enabled = True
+        End If
+    End Sub
+
+    Private Sub Timer5_Tick(sender As Object, e As EventArgs) Handles Timer5.Tick
+        Label20.Text = "Re-Save to Default Folder"
+        Label21.Text = "Re-Save to Default Folder"
+        Label29.Text = "Re-Save to Default Folder"
+        Timer5.Enabled = False
+    End Sub
+
+    Private Sub Label14_Click(sender As Object, e As EventArgs) Handles Label14.Click
+        Process.Start("https://github.com/tymcbride/Synergy")
+    End Sub
+
+    Private Sub Label44_MouseDown(sender As Object, e As MouseEventArgs) Handles Label44.MouseDown, Panel39.MouseDown
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel39, "BackColor", Color.FromArgb(200, 200, 200))
+        t.add(Panel38, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+    Private Sub Label44_MouseEnter(sender As Object, e As EventArgs) Handles Label44.MouseEnter, Panel39.MouseEnter
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel39, "BackColor", Color.White)
+        t.add(Panel38, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+    Private Sub Label44_MouseLeave(sender As Object, e As EventArgs) Handles Label44.MouseLeave, Panel39.MouseLeave
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel39, "BackColor", Color.FromArgb(251, 252, 252))
+        t.add(Panel38, "BackColor", Color.FromArgb(251, 252, 252))
+        t.run()
+    End Sub
+
+    Private Sub Label44_MouseUp(sender As Object, e As MouseEventArgs) Handles Label44.MouseUp, Panel39.MouseUp
+        Dim t As New Transition(New TransitionType_EaseInEaseOut(100))
+        t.add(Panel39, "BackColor", Color.White)
+        t.add(Panel38, "BackColor", Color.FromArgb(204, 204, 204))
+        t.run()
+    End Sub
+
+    Private Sub Label44_Click(sender As Object, e As EventArgs) Handles Label44.Click, Panel39.Click, Panel38.Click
+        My.Settings.Recent1_A = "N/A"
+        My.Settings.Recent1_B = "N/A"
+        My.Settings.Recent1_G = "N/A"
+        My.Settings.Recent2_A = "N/A"
+        My.Settings.Recent2_B = "N/A"
+        My.Settings.Recent2_G = "N/A"
+        My.Settings.Recent3_A = "N/A"
+        My.Settings.Recent3_B = "N/A"
+        My.Settings.Recent3_G = "N/A"
+
+        Label34.Text = My.Settings.Recent1_G
+        Label36.Text = My.Settings.Recent1_B
+        Label35.Text = My.Settings.Recent1_A
+        Label39.Text = My.Settings.Recent2_G
+        Label37.Text = My.Settings.Recent2_B
+        Label38.Text = My.Settings.Recent2_A
+        Label42.Text = My.Settings.Recent3_G
+        Label40.Text = My.Settings.Recent3_B
+        Label41.Text = My.Settings.Recent3_A
+
+        My.Settings.Save()
     End Sub
 End Class
