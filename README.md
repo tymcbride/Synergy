@@ -7,4 +7,4 @@ When you're in the Precinct, every second counts, especially when your benches g
 
 To set the default path for saving generated files to, right-click on the 'Open Folder Location' button, and click the 'Edit' option.
 
-Also, because we're dealing with serial numbers and GCID's that are both unique and valuable to a client, I have made this app open-source so you can easily see the source coding, and know that nothing is saved within the app (besides the folder location). This means that nothing is saved, shared, or sent anywhere, to anyone or anything. 
+Also, because we're dealing with serial numbers and GCID's that are both unique and valuable to a client, I have made this app open-source so you can easily see the source coding. The only information that is stored within the app is the save folder location, and the most recent three GCID's, which can be reset and cleared in the Settings panel. An option to disable this feature is coming in a future update. No information besides those are stored, and no information at all is sent or shared with anyone or anything. 
